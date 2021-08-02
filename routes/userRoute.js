@@ -12,6 +12,7 @@ const jwt=require('jsonwebtoken');
 const crypto=require('crypto')
 const sgMail = require('@sendgrid/mail')
 const authUser=require('../middleware/authUser');
+const secret=process.env.JWT_SECRET || "hfhjkjskcnjksncjknsk jhfsc shcskjhckjs";
 sgMail.setApiKey(process.env.MAILAPI)
 
 router.post('/login',async (req,res)=>{
@@ -22,7 +23,7 @@ router.post('/login',async (req,res)=>{
 		authuser=await bcrypt.compare(password,userfound.pass);
 	if(authuser)
 	{
-		const token=jwt.sign({id:userfound.roll},process.env.JWT_SECRET);
+		const token=jwt.sign({id:userfound.roll},secret);
 		res.cookie("token",token,{
 			httpOnly:true,
 		}).send();
@@ -50,7 +51,7 @@ router.get('/loggedIn',(req,res)=>{
 	const token=req.cookies.token;
 	if(!token)
 		return res.json({msg:"Unauthorized"});
-	const authorized=jwt.verify(token,process.env.JWT_SECRET)
+	const authorized=jwt.verify(token,secret)
 	if(!authorized)
 	{
 		return res.json({msg:"Unauthorized"});

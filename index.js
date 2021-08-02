@@ -13,13 +13,14 @@ const session=require('express-session');
 const cookieParser=require('cookie-parser');
 const path=require('path');
 //mongodb://localhost:27017/alumnidata  "local mongo"
-mongoose.connect('mongodb+srv://DbUser:DbUser@cluster0.apwot.mongodb.net/myFirstDatabase?retryWrites=true&w=majority', {useNewUrlParser: true, useUnifiedTopology: true})
+mongoose.connect(process.env.MONGODB_URI, {useNewUrlParser: true, useUnifiedTopology: true})
 .then(()=>{
 	console.log('Database connected');
 })
 .catch((err)=>{
 	console.log(err);
 })
+app.use(express.static(path.join(__dirname, "client", "build")))
 app.use(express.urlencoded({ extended: true }))
 app.use(cookieParser());
 app.use(cors({ origin: true, credentials: true }));
@@ -34,6 +35,9 @@ if(process.env.NODE_ENV=='production')
 		res.sendFile(path.resolve(__dirname,'client','build','index.html'));
 	})
 }
+app.get("*", (req, res) => {
+    res.sendFile(path.join(__dirname, "client", "build", "index.html"));
+});
 const port=process.env.PORT || 8080;
 app.listen(port,(req,res)=>{
 	console.log('server is listening on port'+port);
