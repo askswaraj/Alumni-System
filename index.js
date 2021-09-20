@@ -2,6 +2,7 @@ if(process.env.NODE_ENV!=="production")
 {
 	require('dotenv').config()	
 }
+const port=process.env.PORT || 8080;
 const express=require('express');
 const app=express();
 const cors = require('cors');
@@ -38,7 +39,6 @@ if(process.env.NODE_ENV=='production')
 // app.get("*", (req, res) => {
 //     res.sendFile(path.join(__dirname, "client", "build", "index.html"));
 // });
-const port=process.env.PORT || 8080;
 app.listen(port,(req,res)=>{
 	console.log('server is listening on port'+port);
 })
