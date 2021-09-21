@@ -19,6 +19,7 @@ const submitchange=(event)=>{
             {   
                 getLogged();
                 props.history.push('/dashboard/'+rollno) ;
+                getLogged();
             }
             else
             {
