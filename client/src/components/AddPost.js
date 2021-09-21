@@ -10,7 +10,7 @@ function AddPost() {
     const [content, setContent] = useState('');
     const submithandler=async (e)=>{
         e.preventDefault();
-        await axios.post('http://localhost:8080/addpost',{id,name,content})
+        await axios.post('/addpost',{id,name,content})
         .then(window.location.reload())
         .catch(e=>console.log(e));
     }

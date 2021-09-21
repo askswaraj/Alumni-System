@@ -13,7 +13,7 @@ const [msg, setMsg] = useState(false);
 const {getLogged}=useContext(AuthContext);
 const submitchange=(event)=>{
     event.preventDefault();
-         axios.post('http://localhost:8080/users/login',{rollno,password})
+         axios.post('/users/login',{rollno,password})
         .then((data)=>{
             if(!data.data.msg)
             {   

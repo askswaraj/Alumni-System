@@ -8,12 +8,12 @@ function AnswerFaqHelper(props) {
     const [answer, setAnswer] = useState('')
     const submithandler=(e)=>{
         e.preventDefault();
-        axios.post('http://localhost:8080/admin/faq/'+post._id,{answer})
+        axios.post('/admin/faq/'+post._id,{answer})
         .then(()=>window.location.reload(false))
         .catch(e=>console.log(e))
     }
     const deletehandler=async ()=>{
-        await axios.delete('http://localhost:8080/admin/deletefaq/'+post._id)
+        await axios.delete('/admin/deletefaq/'+post._id)
         .then(()=>window.location.reload(false))
         .catch(e=>console.log(e))
     }

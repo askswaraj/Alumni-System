@@ -8,7 +8,7 @@ import AuthContext from '../context/AuthContext';
 function AdminDashboard(props) {
     const {getLoggedAdmin}=useContext(AuthContext);
     const outhandler=async ()=>{
-        await axios.get('http://localhost:8080/admin/logout')
+        await axios.get('/admin/logout')
         .then(()=>{
             getLoggedAdmin();
             props.history.push('/')

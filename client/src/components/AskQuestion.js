@@ -12,7 +12,7 @@ function AskQuestion(props) {
     const onSubmit = (e) => {
         e.preventDefault();
         console.log("clicked Submitted")
-        axios.post('http://localhost:8080/users/faq', {question:Comment})
+        axios.post('/users/faq', {question:Comment})
         .then(response => {
             
             if(response.data.success) {

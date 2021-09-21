@@ -15,7 +15,7 @@ function Update(props) {
     useEffect(() => {
         async function fetchAPI()
         {
-            await axios.get('http://localhost:8080/users/'+id)
+            await axios.get('/users/'+id)
             .then((data)=>
             {
                 user=setUser(data.data[0]);
@@ -32,7 +32,7 @@ function Update(props) {
     }, [user])
     const osubmit=(event) => {
         event.preventDefault();
-        axios.put('http://localhost:8080/users/'+id+'/edit',user)
+        axios.put('/users/'+id+'/edit',user)
         .then((data)=>{
             if(!data.data.code){
                 setSuccess(true);

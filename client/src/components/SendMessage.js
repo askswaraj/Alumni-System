@@ -11,7 +11,7 @@ function SendMessage() {
     const submitchange=(e)=>{
         e.preventDefault();
         console.log("Sent");
-        axios.post('http://localhost:8080/admin/sendmail',{mail,sub,content})
+        axios.post('/admin/sendmail',{mail,sub,content})
         .then((data)=>{
             setMsg(data.data.msg);
         })

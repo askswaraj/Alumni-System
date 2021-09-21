@@ -11,7 +11,7 @@ function Reset(props) {
         e.preventDefault();
         if(new1==new2)
         {
-            axios.post(`http://localhost:8080/users/resetpass`,{token,pass:new1})
+            axios.post(`/users/resetpass`,{token,pass:new1})
             .then((data)=>{
                 setMsg(data.data.msg)
                 setInterval(()=>{

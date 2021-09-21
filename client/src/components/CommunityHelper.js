@@ -13,17 +13,17 @@ function CommunityHelper(props) {
     //    .catch((e)=>console.log(e))
     // }, [posts])
     const likehandler=(async (id)=>{
-        await axios.get('http://localhost:8080/like/'+id)
+        await axios.get('/like/'+id)
         // .then((data)=>setPosts(data.data.reverse()))
         .catch((e)=>console.log(e));
     })
     const unlikehandler=(async (id)=>{
-        await axios.get('http://localhost:8080/unlike/'+id)
+        await axios.get('/unlike/'+id)
         // .then((data)=>setPosts(data.data.reverse()))
         .catch((e)=>console.log(e));
     })
     const commenthandler=(async (id)=>{
-            await axios.put('http://localhost:8080/addcomment/'+id,{comment})
+            await axios.put('/addcomment/'+id,{comment})
             .then((data)=>{
                 // setPosts(data.data.reverse())
                 setComment('');
@@ -31,7 +31,7 @@ function CommunityHelper(props) {
             .catch(e=>console.log(e))
     })
     const deletehandler=(async (id)=>{
-        await axios.delete('http://localhost:8080/delete/'+id)
+        await axios.delete('/delete/'+id)
         // .then((data)=>setPosts(data.data))
         .catch(e=>console.log(e))
     })

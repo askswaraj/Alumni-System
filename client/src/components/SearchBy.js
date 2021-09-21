@@ -11,7 +11,7 @@ function SearchBy() {
         event.preventDefault();
         async function fetchData()
         {
-            let url='http://localhost:8080/admin/searchBy?'
+            let url='/admin/searchBy?'
             if(name)
             {
                 url+='name='
@@ -56,7 +56,7 @@ function SearchBy() {
     const clickhandler=(roll)=>{
         if(window.confirm('Are you sure you want to delete '+roll))
         {   
-            axios.delete(`http://localhost:8080/admin/delete/${roll}`)
+            axios.delete(`/admin/delete/${roll}`)
             .then((data)=>{
                 if(data.status==200)
                 {

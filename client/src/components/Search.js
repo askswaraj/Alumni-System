@@ -13,7 +13,7 @@ function Search() {
         e.preventDefault();
         async function fetchData()
         {
-            await axios.get(`http://localhost:8080/admin/search/?q=${name}`)
+            await axios.get(`/admin/search/?q=${name}`)
             .then((data)=>setUsers(data.data))
             .catch((err)=>console.log(err))
         }
@@ -22,7 +22,7 @@ function Search() {
     const refresh=()=>{
         async function fetchData()
         {
-            await axios.get(`http://localhost:8080/admin/search/?q=${name}`)
+            await axios.get(`/admin/search/?q=${name}`)
             .then((data)=>setUsers(data.data))
             .catch((err)=>console.log(err))
         }

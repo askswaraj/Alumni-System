@@ -14,7 +14,7 @@ function ViewAnswer() {
       }
     useEffect(() => {
         console.log('useEffect');
-        axios.get('http://localhost:8080/users/allfaqs')
+        axios.get('/users/allfaqs')
         .then(
             (data)=>{
                 setpost(data.data)

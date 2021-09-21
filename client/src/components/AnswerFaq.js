@@ -7,7 +7,7 @@ function AnswerFaq() {
     useEffect(() => {
         async function fetchPost()
         {
-            await axios.get('http://localhost:8080/admin/noanswerfaq')
+            await axios.get('/admin/noanswerfaq')
             .then((data)=>setPosts(data.data))
             .catch((e)=>console.log(e))
         }

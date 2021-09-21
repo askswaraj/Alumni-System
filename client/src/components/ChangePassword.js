@@ -23,7 +23,7 @@ function ChangePassword(props) {
         e.preventDefault();
         if(new1==new2)
         {
-            axios.put(`http://localhost:8080/users/changepassword/${id}`,{old,new1})
+            axios.put(`/users/changepassword/${id}`,{old,new1})
             .then((data)=>{
                 setMsg(data.data.msg)
                 setInterval(()=>{

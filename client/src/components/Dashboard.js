@@ -12,7 +12,7 @@ function Dashboard(props) {
     useEffect(() => {
         async function fetchMyAPI()
         {
-            await axios.get('http://localhost:8080/users/'+props.match.params.id)
+            await axios.get('/users/'+props.match.params.id)
             .then((users)=>
             {
                 setUser(users.data);
@@ -22,7 +22,7 @@ function Dashboard(props) {
         fetchMyAPI();
     }, [])
   const outhandler=async ()=>{
-    await axios.get('http://localhost:8080/users/logout')
+    await axios.get('/users/logout')
     .then(()=>props.history.push('/'))
     .catch((err)=>console.log(err));
   }

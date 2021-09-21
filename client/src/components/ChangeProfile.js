@@ -17,7 +17,7 @@ function ChangeProfile(props) {
             selectedFile,
             selectedFile.name
         )
-        axios.post('http://localhost:8080/users/'+id+'/profileUpdate', formData,{
+        axios.post('/users/'+id+'/profileUpdate', formData,{
             headers: {
               'Content-Type': 'multipart/form-data'
             }
@@ -28,7 +28,7 @@ function ChangeProfile(props) {
     useEffect(() => {
         async function fetchAPI()
         {
-            await axios.get('http://localhost:8080/users/'+id)
+            await axios.get('/users/'+id)
             .then((data)=>
             {
                 user=setUser(data.data[0]);

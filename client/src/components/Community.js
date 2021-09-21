@@ -9,7 +9,7 @@ function Community() {
     const [posts, setPosts] = useState([]);
     // const [comment, setComment] = useState('');
     useEffect(async () => {
-       await axios.get('http://localhost:8080/allposts')
+       await axios.get('/allposts')
        .then((data)=>setPosts(data.data.reverse()))
        .catch((e)=>console.log(e))
     }, [posts])

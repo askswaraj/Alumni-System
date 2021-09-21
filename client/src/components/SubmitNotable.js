@@ -6,7 +6,7 @@ function SubmitNotable(props) {
     const [pop, setPop] = useState(false)
     const submithandler=(e)=>{
         e.preventDefault();
-        axios.post('http://localhost:8080/users/notable',notable)
+        axios.post('/users/notable',notable)
         .then((data)=>{
             setPop(true)
             setInterval(()=>{

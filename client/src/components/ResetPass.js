@@ -8,7 +8,7 @@ function ResetPass() {
     const [btn, setBtn] = useState(true)
     const submithandler=(e)=>{
         e.preventDefault();
-        axios.post('http://localhost:8080/users/reset',{mail})
+        axios.post('/users/reset',{mail})
         .then((data)=>{
             setMsg(data.data.msg);
             setBtn(false);

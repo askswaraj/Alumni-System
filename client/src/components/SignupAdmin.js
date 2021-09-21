@@ -12,7 +12,7 @@ function SignupAdmin(props) {
 			async function fetchMyAPI()
 			{
 				event.preventDefault();
-				await axios.post('http://localhost:8080/admin/',{name,mail,mob,pass})
+				await axios.post('/admin/',{name,mail,mob,pass})
 				.then((data)=>
 				{
 					//+{name,roll,mail,mob,year,branch,pass}

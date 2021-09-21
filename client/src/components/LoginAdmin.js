@@ -10,7 +10,7 @@ const [password, setpassword] = useState('');
 const [msg, setMsg] = useState(false);
 const submitchange=(event)=>{
     event.preventDefault();
-         axios.post('http://localhost:8080/admin/login',{mob,password})
+         axios.post('/admin/login',{mob,password})
         .then((data)=>{
             if(!data.data.msg)
             {

@@ -7,7 +7,7 @@ function LoginOTP() {
     const [btn, setBtn] = useState(true)
     const submithandler=(e)=>{
         e.preventDefault();
-        axios.post('http://localhost:8080/users/reset',{mob})
+        axios.post('/users/reset',{mob})
         .then((data)=>{
             setMsg(data.data.msg);
             setBtn(false);

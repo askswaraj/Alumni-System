@@ -4,7 +4,7 @@ import Profile from './Profile'
 function User(props) {
     const [users, setusers] = useState([]);
     useEffect(() => {
-        axios.get('http://localhost:8080/users/')
+        axios.get('/users/')
 		.then((data)=>
 		{console.log(data.data);
             users=setusers(data.data);
