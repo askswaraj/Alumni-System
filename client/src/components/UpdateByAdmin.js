@@ -5,9 +5,7 @@ import Button from 'react-bootstrap/Button'
 import Alert from 'react-bootstrap/Alert'
 function Update(props) {
     const id=props.match.params.id;
-    const [user, setUser] = useState({
-        name:'',roll:0,branch:'',mail:'',mob:0,year:0,pass:'',designation:'',organization:''
-    })
+    const [user, setUser] = useState({})
     const [success, setSuccess] = useState(false)
     const [fail, setFail] = useState(false)
     const [subm, setSubm] = useState(false)

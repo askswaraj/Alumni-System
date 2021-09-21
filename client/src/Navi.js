@@ -42,12 +42,22 @@ function Navi() {
                     This is a platform aimed to connect the alumni of our elite Institute. This offers Following features.
                     <ul>
                         <li>Receive frequent Updates about college</li>
-                        <li>Get to know fellow Alumni</li>
-                        <li>Send Message to other alumni</li>
-                        <li>Raise fund for a cause</li>
+                        <li>Get to know and search fellow Alumni</li>
+                        <li>Share posts on community Tab</li>
+                        <li>Ask General questions regarding college on our platform</li>
                     </ul>
                 </p>
             </Jumbotron>
+            <div class="offcanvas offcanvas-top" tabindex="-1" id="offcanvasTop" aria-labelledby="offcanvasTopLabel">
+  <div class="offcanvas-header">
+
+    <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+  </div>
+  <div class="offcanvas-body">
+    Abhishek | Tanmay | Saket <br></br>
+    Alumni Tracking System for NIT Patna ©
+  </div>
+</div>
                 </div>
     )
 }

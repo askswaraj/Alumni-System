@@ -47,8 +47,6 @@ function Dashboard(props) {
         </Nav.Item>
         <NavDropdown title="More" id="nav-dropdown">
         <NavDropdown.Item href="/faq" eventKey="4.1">FAQ</NavDropdown.Item>
-        <NavDropdown.Item eventKey="4.2">Another action</NavDropdown.Item>
-        <NavDropdown.Item eventKey="4.3">Something else here</NavDropdown.Item>
         <NavDropdown.Divider />
         <NavDropdown.Item onClick={outhandler}>Log Out</NavDropdown.Item>
       </NavDropdown>
