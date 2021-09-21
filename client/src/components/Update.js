@@ -6,9 +6,7 @@ import Alert from 'react-bootstrap/Alert'
 import {Link} from 'react-router-dom'
 function Update(props) {
     const id=props.match.params.id;
-    const [user, setUser] = useState({
-        name:'',roll:0,branch:'',mail:'',mob:0,year:0,pass:'',designation:'',organization:''
-    })
+    const [user, setUser] = useState({})
     const [success, setSuccess] = useState(false)
     const [fail, setFail] = useState(false)
     const [subm, setSubm] = useState(false)
@@ -18,7 +16,7 @@ function Update(props) {
             await axios.get('/users/'+id)
             .then((data)=>
             {
-                setUser(data.data);
+                setUser(data.data[0]);
                 console.log(user.name);
             })
             .catch((err)=>console.log("oh"+err))
