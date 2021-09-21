@@ -16,10 +16,10 @@ function Update(props) {
         async function fetchAPI()
         {
             await axios.get('/users/'+id)
-            .then((data)=>
+            .then((users)=>
             {
                 console.log("hi from fetchAPI");
-                setUser(data.data[0]);
+                setUser(users.data[0]);
                 console.log(user.name);
             })
             .catch((err)=>console.log("oh"+err))

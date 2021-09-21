@@ -15,6 +15,7 @@ function Dashboard(props) {
             await axios.get('/users/'+props.match.params.id)
             .then((users)=>
             {
+                console.log(users.data);
                 setUser(users.data);
             })
             .catch((err)=>console.log("oh"+err))
