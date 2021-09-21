@@ -140,7 +140,7 @@ router.get('/:id',authUser,async (req,res)=>{
 	const {id}=req.params;
 	await User.find({roll:parseInt(id)})
 	.then((data)=>{
-		console.log(data);
+		// console.log(data);
 		res.json(data);
 	})
 	.catch((err)=>console.log(err))

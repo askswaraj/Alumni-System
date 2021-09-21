@@ -18,7 +18,7 @@ function Update(props) {
             await axios.get('/users/'+id)
             .then((data)=>
             {
-                user=setUser(data.data[0]);
+                setUser(data.data);
                 console.log(user.name);
             })
             .catch((err)=>console.log("oh"+err))
