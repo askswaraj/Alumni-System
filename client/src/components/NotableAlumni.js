@@ -4,7 +4,7 @@ import { Jumbotron } from 'react-bootstrap';
 function NotableAlumni() {
     const [notable, setNotable] = useState([]);
     useEffect(() => {
-        axios.get('http://localhost:8080/users/notable')
+        axios.get('/users/notable')
         .then((data)=>setNotable(data.data))
         .catch((err)=>console.log(err))
     }, [])
