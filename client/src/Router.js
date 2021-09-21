@@ -41,11 +41,9 @@ function RouterPath() {
                 <Route path="/login" component={Login} />
                 <Route path="/notablealumni" component={NotableAlumni} />
                 <Route path="/signup" component={Signup} />
+                <Route path="/resetpassword" exact component={ResetPass} />
 
-              
-              {  <>
-              <Route path="/resetpassword" exact component={ResetPass} />
-              
+              { loggedUser===true) && <>
               <Route path="/search" component={Search} />
               <Route path="/users" component={User} />
               <Route path="/community" component={Community} />

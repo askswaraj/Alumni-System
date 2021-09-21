@@ -7,7 +7,7 @@ function AuthContextProvider(props) {
     const [user, setUser] = useState({});
     async function getLogged()
     {
-        const loggedRes=await axios.get('http://localhost:8080/users/loggedIn')
+        const loggedRes=await axios.get('/users/loggedIn')
         .then((data)=>{
             if(!data.data.msg)
             {
@@ -19,13 +19,13 @@ function AuthContextProvider(props) {
             }
         })
         .catch(e=>console.log(e))
-        await axios.get('http://localhost:8080/users/loggeduser')
+        await axios.get('/users/loggeduser')
         .then(data=>setUser(data.data))
         .catch(e=>console.log(e))
     }
     async function getLoggedAdmin()
     {
-        const loggedRes=await axios.get('http://localhost:8080/admin/loggedIn')
+        const loggedRes=await axios.get('/admin/loggedIn')
         .then((data)=>{
             if(!data.data.msg)
             {

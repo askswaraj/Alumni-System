@@ -113,7 +113,7 @@ router.post('/reset',async (req,res)=>{
 					email:"abhishektheswaraj@hotmail.com"
 					},
 				subject:"Password Reset Link",
-				html:`<p>Dear ${user.name}</p><h4>Click on this <a href="http://localhost:3000/reset/${token}">Link</a> to reset Your Password</h4>`
+				html:`<p>Dear ${user.name}</p><h4>Click on this <a href="https://alumni-tracking-system-nitp.herokuapp.com/reset/${token}">Link</a> to reset Your Password</h4>`
 			})
 			res.json({msg:"check your Mail"})
 		})
