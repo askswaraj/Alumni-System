@@ -35,7 +35,7 @@ function Navi() {
                     </Nav>
                     </Navbar.Collapse>
                     </Navbar>
-                    <Image fluid style={{height:350,width:885,margin:40,marginLeft:300}} src="http://nitp.ac.in/nitpnew/images/1.jpg" />
+                    <Image fluid style={{height:350,width:885,margin:40,marginLeft:300}} src="https://cache.careers360.mobi/media/presets/720X480/colleges/social-media/media-gallery/143/2018/1/11/NIT-Patna-2.jpg" />
                         <Jumbotron>
                 <h1 style={{marginLeft:300}}>Welcome Alumni of NIT Patna</h1>
                 <p style={{marginLeft:300}}>
@@ -48,7 +48,13 @@ function Navi() {
                     </ul>
                 </p>
             </Jumbotron>
-            <div class="offcanvas offcanvas-top" tabindex="-1" id="offcanvasTop" aria-labelledby="offcanvasTopLabel">
+            
+           <nav class="navbar navbar-dark bg-dark">
+      <div class="container-fluid">
+        <span class="navbar-text">
+           <button class="btn btn-secondary btn-lg" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasTop" aria-controls="offcanvasTop">Know us</button>
+
+<div class="offcanvas offcanvas-top" tabindex="-1" id="offcanvasTop" aria-labelledby="offcanvasTopLabel">
   <div class="offcanvas-header">
 
     <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
@@ -58,6 +64,9 @@ function Navi() {
     Alumni Tracking System for NIT Patna ©
   </div>
 </div>
+        </span>
+      </div>
+     </nav>
                 </div>
     )
 }
