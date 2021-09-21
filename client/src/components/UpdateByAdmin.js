@@ -11,13 +11,15 @@ function Update(props) {
     const [success, setSuccess] = useState(false)
     const [fail, setFail] = useState(false)
     const [subm, setSubm] = useState(false)
+    console.log("hi from update component");
     useEffect(() => {
         async function fetchAPI()
         {
             await axios.get('/users/'+id)
             .then((data)=>
             {
-                user=setUser(data.data[0]);
+                console.log("hi from fetchAPI");
+                setUser(data.data[0]);
                 console.log(user.name);
             })
             .catch((err)=>console.log("oh"+err))
